@@ -1,0 +1,120 @@
+@use '../styles/utils.scss';
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 48px;
+
+  >.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 24px 0;
+
+    @include utils.sp {
+      font-size: 30px;
+    }
+  }
+
+  >.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 28px;
+    background-color: #4676D7;
+    border-radius: 12px;
+
+    @include utils.sp {
+      margin: 0 16px;
+    }
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+    margin: 25px 0 30px;
+  }
+
+  .buttons>.button {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    width: 150px;
+    cursor: pointer;
+
+    &:hover {
+      background: #2F4C8C;
+    }
+  }
+
+  .total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .total>.texts {
+    display: grid;
+    grid-template-columns: 240px 110px 160px 180px 180px;
+    margin: 10px 0 30px;
+
+    @include utils.sp {
+      grid-template-columns: 1fr 1fr;
+      padding: 4px;
+      border: 1px solid #4676D7;
+    }
+  }
+
+  .total>.texts>.text {
+    padding: 4px 8px;
+    background-color: #4676D7;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid white;
+  }
+
+  .graph {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    margin-bottom: 30px;
+  }
+
+  .log>.logs {
+    margin-top: 10px;
+  }
+
+  .log>.title {
+    display: flex;
+    gap: 8px;
+  }
+
+  .log>.title>.button {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+  }
+}

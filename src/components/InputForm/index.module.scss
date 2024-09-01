@@ -1,0 +1,28 @@
+@use '../../styles/utils.scss';
+
+.input-form {
+  display: grid;
+  grid-template-columns: 120px 240px;
+  gap: 20px;
+  align-items: center;
+
+  @include utils.sp {
+    grid-template-columns: 100px 1fr;
+  }
+
+  >.title {
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+    text-align: left;
+    color: white;
+
+    @include utils.sp {
+      font-size: 12px;
+    }
+  }
+
+  >.input {
+    width: 100%;
+  }
+}
