@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/Button";
 import GraphChart from "@/components/GraphChart";
 import { useCallback, useMemo, useState } from "react";
 import InputForm from "../components/InputForm";
@@ -226,16 +227,8 @@ export default function Home() {
         />
       </div>
       <div className={styles.buttons}>
-        <button
-          type="button"
-          className={styles.button}
-          onClick={handleSimulation}
-        >
-          1回
-        </button>
-        <button
-          type="button"
-          className={styles.button}
+        <Button onClick={handleSimulation}>1回</Button>
+        <Button
           onClick={() => {
             for (let i = 0; i < 10; i++) {
               handleSimulation();
@@ -243,10 +236,8 @@ export default function Home() {
           }}
         >
           10回
-        </button>
-        <button
-          type="button"
-          className={styles.button}
+        </Button>
+        <Button
           onClick={() => {
             for (let i = 0; i < 100; i++) {
               handleSimulation();
@@ -254,10 +245,8 @@ export default function Home() {
           }}
         >
           100回
-        </button>
-        <button type="button" className={styles.button} onClick={handleReset}>
-          リセット
-        </button>
+        </Button>
+        <Button onClick={handleReset}>リセット</Button>
       </div>
       {averages && (
         <div className={styles.total}>
