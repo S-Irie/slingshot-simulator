@@ -12,4 +12,10 @@
   &:hover {
     background: #2F4C8C;
   }
+
+  &:disabled {
+    background: #A9A9A9;
+    /* 灰色 */
+    cursor: not-allowed;
+  }
 }
