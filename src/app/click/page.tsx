@@ -75,6 +75,8 @@ const Click: FC = () => {
         <Button
           onMouseDown={startSimulation}
           onMouseUp={stopSimulation}
+          onTouchStart={startSimulation}
+          onTouchEnd={stopSimulation}
           disabled={hit}
         >
           自動連打
